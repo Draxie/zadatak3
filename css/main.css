@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #121725;
+  background-image: url(/assets/desktop/bg-pattern-dots.svg), url(/assets/desktop/image-host.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 100% -688%, 100% -20%;
+}
+
+.logo {
+  position: fixed;
+  -webkit-transform: translateY(160%) translateX(120%);
+          transform: translateY(160%) translateX(120%);
+}
+
+.app-info {
+  width: 710px;
+  height: 500px;
+  background-color: #121725;
+  position: fixed;
+  -webkit-transform: translateX(25%) translateY(53.7%);
+          transform: translateX(25%) translateY(53.7%);
+  padding-top: 60px;
+}
+
+.app-info .highlighted {
+  font-family: Chivo;
+  font-weight: 100;
+  font-size: 52px;
+  line-height: 62px;
+  text-transform: uppercase;
+  color: #54E6AF;
+}
+
+.app-info .highlighted span {
+  color: white;
+}
+
+.app-info .app-description {
+  font-family: Chivo;
+  font-size: 18px;
+  line-height: 28px;
+  color: #C2CBE5;
+  width: 70%;
+  margin-top: 40px;
+  opacity: 0.7;
+}
+
+.app-info .email-input {
+  margin-top: 40px;
+  width: 450px;
+  height: 50px;
+  background-color: #2C344B;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+}
+
+.app-info .email-input button {
+  position: relative;
+  border-radius: 30px;
+  width: 150px;
+  height: 87%;
+  margin-block: auto;
+  border: 0px;
+  outline: 0px;
+  background-color: #54E6AF;
+  font-weight: bold;
+}
+
+.app-info .email-input button:hover {
+  cursor: pointer;
+  background-color: #B3FFE2;
+}
+
+.app-info .email-input input {
+  margin-left: 20px;
+  width: 277px;
+  border: 0px;
+  outline: 0px;
+  background-color: #2C344B;
+  color: white;
+}
+
+.app-info .email-input input + span {
+  padding-right: 30px;
+}
+
+.app-info .email-input input:invalid + span:after {
+  color: red;
+  position: absolute;
+  width: 200px;
+  content: 'Oops! Please check your email';
+  padding-left: 5px;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
+.app-info .email-input input:valid + span:after {
+  position: absolute;
+  content: '';
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.app-info .validity {
+  position: absolute;
+}
+
+.app-info .logo-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 60px;
+  width: 600px;
+  opacity: 0.7;
+}
+
+.app-info .mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1220px) {
+  body {
+    background-image: url(/assets/desktop/bg-pattern-dots.svg), url(/assets/tablet/image-host.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 4% -780%, top right;
+  }
+  .logo {
+    -webkit-transform: translateY(60%) translateX(20%);
+            transform: translateY(60%) translateX(20%);
+  }
+  .app-info {
+    width: 640px;
+    height: 466px;
+    -webkit-transform: translateX(4%) translateY(46%);
+            transform: translateX(4%) translateY(46%);
+  }
+  .app-info .highlighted {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .app-info .app-description {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-image: url(/assets/mobile/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.85;
+  }
+  .logo {
+    position: relative;
+    width: 135px;
+    margin-inline: auto;
+    -webkit-transform: translateX(0px) translateY(0px);
+            transform: translateX(0px) translateY(0px);
+    margin-block: 50px;
+  }
+  .app-info {
+    width: auto;
+    -webkit-transform: translateX(0%) translateY(0%);
+            transform: translateX(0%) translateY(0%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: 0px;
+  }
+  .app-info .highlighted {
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+  }
+  .app-info .app-description {
+    width: 80%;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .app-info .pc {
+    display: none;
+  }
+  .app-info .mobile {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    justify-items: space-between;
+    width: 90%;
+  }
+  .app-info .mobile .slogo {
+    width: 16%;
+  }
+  .email-input {
+    width: 90% !important;
+    height: 220px !important;
+    margin-top: 60px !important;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .email-input button {
+    position: relative;
+    border-radius: 30px;
+    width: 100% !important;
+    height: 50px !important;
+    margin-top: 20px !important;
+  }
+  .email-input input {
+    margin-left: 0px !important;
+    width: 100% !important;
+    height: 50px;
+    border-radius: 30px;
+    border: 0px;
+    outline: 0px;
+    background-color: #2C344B;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 20px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
