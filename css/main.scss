@@ -84,9 +84,6 @@ body {
       background-color: #2c344b;
       color: white;
     }
-    input + span {
-      padding-right: 30px;
-    }
 
     input:invalid + span:after {
       color: red;
@@ -242,6 +239,16 @@ body {
       background-color: #2c344b;
       box-sizing: border-box;
       padding-left: 20px;
+    }
+
+    input:invalid + span:after {
+        transform: translateY(-30px) !important;
+      }
+  
+      input:valid + span:after {
+        position: absolute;
+        content: "";
+        transform: translateY(-30px);
     }
   }
 }

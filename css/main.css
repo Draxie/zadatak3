@@ -92,10 +92,6 @@ body {
   color: white;
 }
 
-.app-info .email-input input + span {
-  padding-right: 30px;
-}
-
 .app-info .email-input input:invalid + span:after {
   color: red;
   position: absolute;
@@ -266,6 +262,16 @@ body {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding-left: 20px;
+  }
+  .email-input input:invalid + span:after {
+    -webkit-transform: translateY(-30px) !important;
+            transform: translateY(-30px) !important;
+  }
+  .email-input input:valid + span:after {
+    position: absolute;
+    content: "";
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
   }
 }
 /*# sourceMappingURL=main.css.map */
